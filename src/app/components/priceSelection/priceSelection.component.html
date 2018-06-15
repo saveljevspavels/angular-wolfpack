@@ -1,0 +1,29 @@
+<div class="app-priceSelection">
+    <h4 class="app-priceSelection__header">
+        Choose the price
+    </h4>
+    <div class="app-priceSelection__options">
+        <div
+            *ngFor="let price of priceOptions"
+            class="app-priceSelection__options__price-card"
+            [ngClass]="{'app-priceSelection__options__price-card--selected': price === selectedPrice}"
+            (click)=priceChange(price)
+        >
+            <input
+                class="app-priceSelection__options__price-card__input"
+                [value]="price"
+                type="radio"
+                [(ngModel)]="selectedPrice"
+            /><label></label>
+            <div class="app-priceSelection__options__price-card__price">
+                <span class="app-priceSelection__options__price-card__price__currency">
+                    {{ price.currency | currency }}
+                </span>
+                {{ price.value }}
+            </div>
+            <div class="app-priceSelection__options__price-card__description">
+                {{ price.description }}
+            </div>
+        </div>
+    </div>
+</div>

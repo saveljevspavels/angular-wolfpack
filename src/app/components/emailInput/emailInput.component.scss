@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variables.scss';
+
+.app-email {
+    &__header {
+        margin: 0 0 8px 0;
+        font-size: 1rem;
+    }
+    &__input {
+        border: 2px solid #B0BEC5;
+        border-radius: $border-radius;
+        font-size: 1rem;
+        padding: 20px;
+        width: 400px;
+        &.invalid {
+            border: 2px solid red;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .app-email {
+        &__input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}

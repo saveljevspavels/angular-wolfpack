@@ -1,0 +1,18 @@
+<div class="app-fileUpload">
+    <h3 class="app-fileUpload__heading">{{ heading }}</h3>
+    <file-drop 
+        (onFileDrop)="dropped($event)" 
+        (onFileOver)="fileOver($event)"
+        (onFileLeave)="fileLeave($event)"
+    >
+        <div class="app-fileUpload__content">
+            <img src="assets/images/upload_orange.svg" class="app-fileUpload__content__upload-logo" />
+            <h4 class="app-fileUpload__content__title">Drop your files here</h4>
+            <h5 class="app-fileUpload__content__subtitle">or choose from your <span class="app-fileUpload__content__subtitle__highlighted">computer</span></h5>
+        </div>    
+    
+    </file-drop>
+    <mat-dialog-actions>
+        <button class="app-fileUpload__close-button" mat-button type="button" mat-dialog-close>Cancel</button>
+    </mat-dialog-actions>
+</div>

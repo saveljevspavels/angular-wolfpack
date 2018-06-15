@@ -1,0 +1,76 @@
+@import './assets/styles/variables.scss';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: Barlow;
+    src: url(assets/fonts/Barlow-Regular.otf);
+}
+
+@font-face {
+    font-family: Barlow-Semibold;
+    src: url(assets/fonts/Barlow-Semibold.otf);
+}
+
+body {
+    margin: 0;
+    font-family: Barlow, Helvetica, sans-serif;
+    font-size: $font-size;
+}
+
+.content-container {
+    position: relative;
+    margin: auto;
+    max-width: $max-width;
+}
+
+.button {
+    text-align: center;
+    border-radius: $border-radius;
+    padding: 14px 0 13px 0;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.popup {
+    height: 500px;
+    width: 400px;
+    &__backdrop {
+        background: linear-gradient(rgba(#4F4F4F, 0.85),rgba(#333333,0.85))
+    }
+    .mat-dialog-container {
+        padding: 21px;
+    }
+    div[class^="drop-zone"] {
+        width: 100%;
+        height: 211px;
+        border: 3px dashed #B0BEC5;
+        border-radius: 6px;
+        box-sizing: border-box;
+        div[class^="content"] {
+            height: inherit;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .content-container {
+        width: 100%;
+        padding: 0 47px;
+        box-sizing: border-box;
+    }
+
+    .popup {
+        height: 100%;
+        width: 100%;
+        max-width: 100%!important;
+        box-sizing: border-box;
+    }
+}

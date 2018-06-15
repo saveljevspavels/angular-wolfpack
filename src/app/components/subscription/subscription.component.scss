@@ -1,0 +1,47 @@
+@import '../../../assets/styles/variables.scss';
+
+.app-subscription {
+    display: flex;
+    background-color: $light-grey;
+    margin-top: 53px;
+    padding-top: 113px;
+    &__content {
+        position: relative;
+        margin: auto;
+        &__button-container {
+            display: flex;
+            justify-content: center;
+        }
+        &__send-button {
+            font-family: Barlow-Semibold;;
+            font-size: 1rem;
+            width: 202px;
+            padding: 13px 0 14px 0;
+            margin: 53px 0 97px 0;
+            color: $background-color;
+            background-color: $blue;
+            transition: background-color $animation-length;
+            border-radius: $border-radius;
+            &:hover {
+                background-color: lighten($blue, 20%);
+            }
+            &.disabled {
+                pointer-events: none;
+                background-color: $grey;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .app-subscription {
+        padding-top: 41px;
+        &__content {
+            &__send-button {
+                margin: 37px 0 60px 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }    
+}

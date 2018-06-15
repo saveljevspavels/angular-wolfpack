@@ -1,0 +1,17 @@
+<div class="app-email">
+    <h5 class="app-email__header">
+        Email input
+    </h5>  
+    <input
+        type="email"
+        class="app-email__input"
+        placeholder="Your email"
+        #userEmail="ngModel"
+        [(ngModel)]="email"
+        (input)="emailChange(!(userEmail.touched && !userEmail?.valid))"
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+        [ngClass]="{invalid : userEmail.touched && !userEmail?.valid}"
+        required
+        email
+    />
+</div>

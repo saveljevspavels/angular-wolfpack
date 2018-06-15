@@ -1,0 +1,41 @@
+@import '../../../assets/styles/variables.scss';
+
+.app-fileUpload {
+    &__heading {
+        font-size: 2.125rem;
+        text-align: center;
+        margin: 79px 0 52px 0;
+    }
+    &__content {
+        &__upload-logo {
+            display: block;
+            position: relative;
+            margin: 54px auto 44px auto;
+        }
+        &__title {
+            font-size: 1.25rem;
+            margin: 8px 0;
+            color: #808E95;
+            text-align: center;
+        }
+        &__subtitle {
+            font-size: 1rem;
+            margin: 8px 0;
+            color: #808E95;
+            &__highlighted {
+                color: $orange;
+                cursor: pointer;
+            }
+        }
+    }
+    &__close-button {
+        font-size: 1.125rem;
+        color: $orange;
+        transition: color $animation-length;
+        position: relative;
+        margin: 36px auto 0 auto;
+        &:hover {
+            color: $background-yellow;
+        }
+    }
+}

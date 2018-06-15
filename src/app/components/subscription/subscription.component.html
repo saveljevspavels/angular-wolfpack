@@ -1,0 +1,26 @@
+<div class="app-subscription">
+    <div class="content-container">
+        <div class="app-subscription__content">
+            <form (submit)="sendRequest()">
+                <app-emailInput
+                    [email]="email"
+                    (emailChanged)="emailChangedHandler($event)"
+                    (emailValid)="emailValidHandler($event)"
+                ></app-emailInput>
+                <app-priceSelection 
+                    [priceOptions]="priceOptions" 
+                    [selectedPrice]="selectedPrice"
+                    (selectedPriceChanged)="selectedPriceChangedHandler($event)"
+                ></app-priceSelection>
+                <div class="app-subscription__content__button-container">
+                    <input
+                        type="submit"
+                        [ngClass]="{disabled : !emailValid}"
+                        class="app-subscription__content__send-button button"
+                        value="Send"
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

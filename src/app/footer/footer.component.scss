@@ -1,0 +1,18 @@
+@import '../../assets/styles/variables.scss';
+
+.app-footer {
+    background-color: $grey;
+    &__text {
+        text-align: center;
+        font-size: 0.75rem;
+        padding: 43px;
+    }
+}
+
+@media (max-width: $mobile) {
+    .app-footer {
+        &__text {
+            padding: 23px;
+        }
+    }
+}

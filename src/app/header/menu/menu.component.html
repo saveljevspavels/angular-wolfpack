@@ -1,0 +1,7 @@
+<div class="app-menu">
+    <ul class="app-menu__links">
+        <li *ngFor="let link of menuLinks" class="app-menu__links__li">
+            <a  class="app-menu__links__li__link" href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+    </ul>
+</div>
